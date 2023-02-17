@@ -1,0 +1,52 @@
+.checkoutpopup{
+    margin: 0 auto;
+    width: 96%;
+    max-width: var(--uniwidth);
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    height: 34px;
+    transform: translateX(-50%);
+    bottom: 50px;
+    background-color: var(--unigreencolor);
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    animation: fadeIn 500ms ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+      transform: translateY(0%);
+    }
+  }
+  
+
+.itemprice {
+
+    justify-content: center;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    color: var(--uniblackcolor);
+    font-size: bold;
+}
+
+.checkoutbtn{
+    text-decoration-line: none;
+    color: var(--uniwhitecolor);
+    text-align: center;   
+
+}
+.checkoutbtn1{
+    text-align: end;
+    padding-right: 30px;
+    font-weight: 800;
+}
+
+.priceincheckout{
+    margin-left: 10px;
+    font-size: 15px;font-weight: 700;
+}

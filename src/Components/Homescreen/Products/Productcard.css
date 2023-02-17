@@ -1,0 +1,99 @@
+.mainpd{
+    padding-bottom: 10px;
+}
+
+.productcard {
+    background-color: var(--productcardbg);
+    width:90%;
+    align-items: center;
+    margin: 0 auto;
+    height: 130px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.productimage{
+    margin-bottom: 5px;
+    width: 80px;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid grey;
+
+}
+
+.details{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.plusminus{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:none;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.inputqty{
+    color: var(--unigreencolor);
+    background: transparent;
+    width: 20px;
+    text-align: center;
+    border: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 15px;
+    font-weight: 700
+
+}
+.plusbutton{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--unigreencolor);
+    border: none;
+    background-color:transparent;
+   
+}
+
+.addtocartbutton{
+    font-size: 15px;
+    border-radius: 4px;
+    border: none; 
+    background: none;
+    color:var(--unigreencolor);
+    font-weight: 700
+}
+
+.mainpd2{
+    margin: 0 auto;
+    text-align: center;
+}
+.price{
+    margin-top: 5px;
+    color: var(--uniblackcolor);
+    padding-left: 4px;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.Addtocartandqty{
+    justify-content: center;
+    align-items: center;
+   display: flex;
+    box-shadow: var(--uniboxshadow);
+    background-color: none;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.Productslistitem {
+  margin: 0 auto;
+}

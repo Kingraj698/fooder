@@ -1,0 +1,18 @@
+.noproduct{
+    margin: 0 auto;
+    max-width: var(--uniwidth) ;
+    margin-top: 15rem;
+    text-align: center;
+  }
+
+  .clearcart{
+    color: var(--uniwhitecolor);
+    background: var(--unicolor);
+    border-radius: 5px;
+    border: none;
+    padding: 10px; 
+    margin-right: 20px; 
+    margin-bottom: 10px;  
+    text-decoration: wavy;
+}
+

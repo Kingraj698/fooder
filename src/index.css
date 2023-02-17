@@ -1,4 +1,27 @@
+:root {
+  --uniwidth: 469px;
+  --unicolor: linear-gradient(270deg, #e65433, #b94f4fc3) ;
+  --uniboxshadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --uniwhitecolor: white;
+  --unigreencolor: rgb(20, 185, 20);
+  --uniblackcolor: black;
+
+  /* Product card  */
+  --productcardbg: rgb(252, 249, 249) ;
+
+  /* categories */
+  --categoriesbg:rgba(255, 255, 255, 0.358) ;
+
+}
+
+
 body {
+  background: linear-gradient(270deg, #d6ddf3, #faa8a86f);
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +34,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input,
+textarea,
+button,
+select,
+a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+

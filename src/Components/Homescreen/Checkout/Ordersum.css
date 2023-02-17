@@ -1,0 +1,204 @@
+.Deliverybtn {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2px;
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: var(--uniboxshadow);
+}
+
+.inactivedeliverbtn {
+    border-radius: 5px;
+    background: none;
+    border: 1px white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+.ordersummarytotal {
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    backdrop-filter: blur(55px);
+    background: rgb(255, 255, 255);
+    -webkit-animation: conditionalOpen 100ms normal forwards ease-in-out;
+    -moz-animation: conditionalOpen 100ms normal forwards ease-in-out;
+    animation: conditionalOpen 100ms normal forwards ease-in-out;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+
+    
+}
+
+.ordersummary {
+    padding: 5px;
+    box-shadow: var(--uniboxshadow);
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    backdrop-filter: blur(55px);
+    background: rgb(255, 255, 255)
+}
+
+.ordersummarytotal p {
+    font-weight: 600;
+}
+
+.TotalAmount {
+    text-align: center;
+    background-color: rgba(64, 241, 48, 0.338);
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.TotalAmount1 {
+    background-color: rgba(64, 241, 48, 0.393);
+    margin-right: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+
+
+}
+
+.ordersummaryheader {
+    font-size: 15px;
+    background: var(--unicolor);
+    color: var(--uniwhitecolor);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+
+.activedeliverbtns {
+    font-weight: 800;
+    transition: 500ms ease-in-out;
+    transition-property: color;
+    background: var(--unicolor);
+    color: aliceblue;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    animation: slide-in 1s forwards ;
+    -webkit-animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(-70%); }
+}
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(100%); }
+}
+
+
+
+
+.addressandall {
+    text-align: center;
+}
+
+.addressbar {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--uniboxshadow);
+
+}
+
+.delivermsg {
+    padding: 10px;
+    -webkit-animation: conditionalOpen 500ms normal forwards ease-in-out;
+    -moz-animation: conditionalOpen 500ms normal forwards ease-in-out;
+    animation: conditionalOpen 500ms normal forwards ease-in-out;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+
+}
+
+.deliverychargesanimation{
+    -webkit-animation: conditionalOpen 300ms normal forwards ease-in-out;
+    -moz-animation: conditionalOpen 300ms normal forwards ease-in-out;
+    animation: conditionalOpen 300ms normal forwards ease-in-out;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+
+}
+
+
+
+
+
+@-webkit-keyframes conditionalOpen {
+    from {
+        transform: scaleY(0)
+    }
+
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@-moz-keyframes conditionalOpen {
+    from {
+        transform: scaleY(0)
+    }
+
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@keyframes conditionalOpen {
+    from {
+        transform: scaleY(0)
+    }
+
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@-webkit-keyframes conditionalClose {
+    from {
+        transform: scaleY(1)
+    }
+
+    to {
+        transform: scaleY(0)
+    }
+}
+
+@-moz-keyframes conditionalClose {
+    from {
+        transform: scaleY(1)
+    }
+
+    to {
+        transform: scaleY(0)
+    }
+}
+
+@keyframes conditionalClose {
+    from {
+        transform: scaleY(1)
+    }
+
+    to {
+        transform: scaleY(0)
+    }
+}
+

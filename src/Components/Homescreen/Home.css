@@ -1,0 +1,10 @@
+.home {
+margin: 0 auto;
+  max-width: var(--uniwidth) ;
+  margin-bottom: 10rem;
+}
+
+.header{
+  margin-bottom: 55px;
+}
+

@@ -1,0 +1,46 @@
+.Menubutton{
+position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 20;
+  box-shadow: var(--uniboxshadow);
+  transform: translateY(-180%);
+  transition: 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+
+}
+@keyframes fadeIn {
+    from {
+      transform: translateY(600%);
+    }
+  }
+  
+
+.Menutwobutton{
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 20;
+    box-shadow: var(--uniboxshadow);
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+.Menudisplay{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .Menutwobutton{
+        right: 450px;
+    
+    }
+    .Menubutton{
+        right: 450px;
+    
+    }
+    
+  }
