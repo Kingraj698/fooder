@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Header.css'
 import { BsFillHandbagFill } from 'react-icons/bs'
 import { MdFoodBank } from 'react-icons/md'

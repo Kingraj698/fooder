@@ -1,45 +1,68 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useCallback } from 'react'
 import './Checkout.css'
 import { Link } from 'react-router-dom'
 import { TiArrowBack } from 'react-icons/ti'
 import Productlist from './Productlist'
 import Noproduct from './Noproduct'
 import Ordersummery from './Ordersummery'
-
+import toast, { Toaster } from 'react-hot-toast';
+import swal from 'sweetalert';
+import Loading from '../../Loading/Loading'
 
 
 
 const Checkout = () => {
 
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]")
+  const [loading, setLoading] = useState(true);
+  const carttt = JSON.parse(localStorage.getItem("cart")) || []
 
+  const [cart, setcart] = useState(carttt);
 
-  const [cart, setcart] = useState(cartFromLocalStorage);
-  const [Deliverycharge, setDeliverycharge] = useState(40)
+  const updatecart = useCallback(
+    () => {
+      setcart(JSON.parse(localStorage.getItem("cart")) || []);
+    }
+  )
+  
 
+  useEffect(()=> {
+    updatecart();
+    setTimeout(()=>{
+      Loader();
+    },300 )
 
-  useEffect(() => {
+  },[carttt])
 
-
-
+  const Loader = () => {
+      setLoading(false)
+   
   }
-    , [cart])
-
   const getTotalPrice = (items) => items
-    .map((item) => item.price)
+    .map((item) => item.price * item.qty)
     .reduce((acc, value) => acc + value, 0);
 
   const result = getTotalPrice(cart);
 
   const clearcart = () => {
+    swal({
+      title: "Are you sure?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        localStorage.clear("cart");
+        toast.success('Cart has been cleared')
+      } 
+    }); }
 
-    localStorage.clear("cart");
-    setcart([])
-    localStorage.clear("cartid");
-  }
 
+    if (loading) {
+      return <div> <Loading/> </div>
+    }  else
 
-  return (
+  {return (
     <div>
       <div className='checkout' >
         <div className='heading'>
@@ -56,7 +79,7 @@ const Checkout = () => {
               {cart.map((item, i) =>
                 <tr key={i}>
                   <Productlist
-                    title={item.name}
+                    title={item.title}
                     price={item.price}
                     id={item.id}
                   />
@@ -73,7 +96,7 @@ const Checkout = () => {
 
           </div>
 
-          
+
 
         </div> :
 
@@ -83,7 +106,7 @@ const Checkout = () => {
       </div>
 
     </div>
-  )
+  )}
 }
 
 export default Checkout

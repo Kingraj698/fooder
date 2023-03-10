@@ -1,33 +1,52 @@
 import React from 'react'
 import './Productcard.css'
-import bgimage from '../../../png-image.png'
 import { useState } from 'react'
-import { useEffect } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
-const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 const Productcard = (props) => {
 
-  const [cart, setcart] = useState(cartFromLocalStorage);
-  const [Qty, setQty] = useState(props.Quantity);
+  let [cartArr, setCartArr] = useState(JSON.parse(localStorage.getItem('cart')) || [])
 
 
-  const Incrementnumber = (id) => {
-    setQty(Qty + 1);
-    console.log(Qty);
-    
-}
+  const Incrementnumber = (id, Quantity) => {
 
+    let items = JSON.parse(localStorage.getItem('cart'));
+    let obj = items.find((o, i) => {
+      if (o.id === id) {
+        items[i].qty = items[i].qty + Quantity;
+      }
+    });
+    localStorage.setItem("cart", JSON.stringify(items));
 
-  const Decrementnumber = () => {
-    {
-      Qty > 0 && setQty(Qty - 1)
+    setCartArr(items)
+  };
 
-    }
+  
+  const TotalQuantity = cartArr.find(item => item.id === props.id);
+
+  const addtocart = (id, title, price) => {
+
+    let items = JSON.parse(localStorage.getItem('cart')) || []
+
+    items.push({ id, title, price, qty: 1 })
+    localStorage.setItem("cart", JSON.stringify(items))
+    setCartArr(items)
   }
+
+  const Deleteitem = () => {
+
+    let items = JSON.parse(localStorage.getItem('cart'));
+    const filteredPeople = items.filter((item) => item.id !== props.id);
+    localStorage.setItem("cart", JSON.stringify(filteredPeople));
+    setCartArr(filteredPeople);
+    toast.success('Removed from cart');
+  }
+
 
   return (
     <div className='mainpd'>
+
       <div className='productcard'>
         <div className='details'>
           <h> {props.title} </h>
@@ -36,16 +55,23 @@ const Productcard = (props) => {
         <div className='mainpd2'>
           <img className='productimage' src='https://media-cdn.tripadvisor.com/media/photo-s/19/1e/1a/3a/pizza-hut.jpg' />
           <div className='Addtocartandqty'>
-            {props.cartid?.includes(props.id) ?
+
+
+            {cartArr.find((o) => o.id === props.id) ?
               <div className='plusminus'>
-                <button onClick={()=>Decrementnumber(props.id)} className='plusbutton'> - </button>
-                <input readOnly="true" value={Qty} className='inputqty' />
-                <button onClick={()=>Incrementnumber(props.id)} className='plusbutton' > + </button>
+                {TotalQuantity.qty > 1 ?
+                  <button onClick={() => Incrementnumber(props.id, -1)} className='plusbutton'> - </button>
+                  : <button onClick={() => Deleteitem(props.id)} className='plusbutton'> - </button>
+
+                }
+
+                <h5 className='inputqty' > {TotalQuantity.qty} </h5>
+
+                <button onClick={() => Incrementnumber(props.id, +1, props)} className='plusbutton' > + </button>
               </div>
 
               :
-
-              <button className='addtocartbutton' onClick={() => props.addtocart(props.id, props.title, props.price)} > Add </button>
+              <button className='addtocartbutton' onClick={() => addtocart(props.id, props.title, props.price)} > Add </button>
             }
           </div>
         </div>

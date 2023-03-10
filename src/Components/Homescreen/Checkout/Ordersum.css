@@ -46,7 +46,7 @@
     margin: 10px;
     text-align: center;
     backdrop-filter: blur(55px);
-    background: rgb(255, 255, 255)
+    background: rgb(255, 255, 255);
 }
 
 .ordersummarytotal p {
@@ -118,6 +118,7 @@
 }
 
 .delivermsg {
+    font-size: 15px;
     padding: 10px;
     -webkit-animation: conditionalOpen 500ms normal forwards ease-in-out;
     -moz-animation: conditionalOpen 500ms normal forwards ease-in-out;
@@ -200,5 +201,33 @@
     to {
         transform: scaleY(0)
     }
+}
+
+
+.priceanditemincheckoutpopup {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+    color: black;
+}
+
+.checkoutpopup2{
+    text-align: center;
+    margin: 0 auto;
+    width: 99%;
+    max-width: var(--uniwidth);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    height: 54px;
+    transform: translateX(-50%);
+    bottom: 51px;
+    background-color:var(--uniwhitecolor);
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: var(--uniboxshadow);
+    border: solid rgb(198, 198, 198);
 }
 

@@ -1,14 +1,8 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.react-tel-input .form-control {
-  @apply !w-full py-6 !text-base;
+.registernow {
+  width: 320px;
+  background-color: rgb(255, 255, 255);
+ text-align: center;
+ height: 350px;
+ border-radius: 5px;
+ padding: 10px;
 }
-
-.opt-container {
-  @apply flex justify-between gap-2;
-}
-.opt-container input {
-  @apply !mr-0 flex-1 py-5 outline-none;
-} */

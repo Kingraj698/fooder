@@ -26,25 +26,14 @@
 }
 
 .plusminus1{
-    justify-content: left;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    width: 25%;
     background-color:none;
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-radius: 5px;    
 }
-.input1{  
-    background-color: transparent;
-    width: 20px;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    margin-right: 2px;
-    margin-left: 2px;
-    color:  var(--unigreencolor);
-    font-weight: 1000;
-}
+
 .plusbutton1{
     font-weight: 700;
     color: var(--unigreencolor);

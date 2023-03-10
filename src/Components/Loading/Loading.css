@@ -1,0 +1,63 @@
+.loading {
+    margin: 0 auto;
+    width: 00px;
+    height: 400px;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background-color: transparent;
+}
+
+/* .loadinganimation{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background-color: aquamarine;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+   
+} */
+
+/* KEYFRAMES */
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+  
+ 
+  /* PULSE BUBBLES */
+  
+  .pulse-container {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pulse-bubble {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;
+  }
+  
+  .pulse-bubble-1 {
+      animation: pulse .4s ease 0s infinite alternate;
+  }
+  .pulse-bubble-2 {
+      animation: pulse .4s ease .2s infinite alternate;
+  }
+  .pulse-bubble-3 {
+      animation: pulse .4s ease .4s infinite alternate;
+  }
+  

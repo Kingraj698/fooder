@@ -33,6 +33,7 @@
 }
 
 .plusminus{
+    gap: 1px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -47,19 +48,17 @@
     width: 20px;
     text-align: center;
     border: none;
-    margin-right: 2px;
-    margin-left: 2px;
     font-size: 15px;
-    font-weight: 700
-
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
 }
 .plusbutton{
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 20px;
     color: var(--unigreencolor);
     border: none;
     background-color:transparent;
-   
 }
 
 .addtocartbutton{
@@ -96,4 +95,10 @@
 
 .Productslistitem {
   margin: 0 auto;
+}
+
+.toaster{
+    height: 30px;
+   margin-top: 50px;
+   border: none;
 }
